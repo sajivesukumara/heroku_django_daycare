@@ -22,21 +22,8 @@ $ python manage.py collectstatic
 
 $ heroku local
 ```
-
 Your app should now be running on [localhost:5000](http://localhost:5000/).
 
-## Deploying to Heroku
-
-```sh
-$ heroku create
-$ git push heroku master
-
-$ heroku run python manage.py migrate
-$ heroku open
-```
-or
-
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
 ## Documentation
 
@@ -44,5 +31,24 @@ For more information about using Python on Heroku, see these Dev Center articles
 
 - [Python on Heroku](https://devcenter.heroku.com/categories/python)
 
-
 heroku ps:scale web=1
+
+## Commiting and Running django application on heroku
+## Deploying to Heroku
+
+```sh
+export PATH=$PATH:"/C/Program Files/heroku/bin"
+
+git add .
+git commit -m "Updates"
+git push heroku master
+
+heroku run python manage.py migrate
+heroku ps:scale web=1
+
+heroku open
+```
+or
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
